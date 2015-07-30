@@ -1,0 +1,10 @@
+<sidebar></sidebar>
+<div layout="column" class="relative" layout-fill role="main" md-swipe-right="openSidenav('left')" md-swipe-left="closeSidenav('left')">
+    <navbar></navbar>
+    <md-content flex class="{{ state.current.containerClass || 'md-white-background' }}" im-pull-to-refresh refresh-function="reload()">
+        <div layout="column">
+            <md-progress-linear ng-show="loading" class="md-accent fade-in app-progress" md-mode="indeterminate"></md-progress-linear>
+            <div ui-view="content" class="ease-in" layout layout-fill autoscroll="true"></div>
+        </div>
+    </md-content>
+</div>

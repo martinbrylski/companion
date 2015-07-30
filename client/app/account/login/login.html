@@ -1,0 +1,41 @@
+<div layout-align="space-around center" layout="column" class="app-background" layout-fill>
+    <div class="rounded-corners img-frame clickable" layout-align="center center" layout="column" ui-sref="start">
+        <md-icon md-svg-icon="bw_logo" class="s96"></md-icon>
+        <h2 class="white-text md-display-1 slight-opacity">Bergwacht Dresden</h2>
+    </div>
+    <div>
+        <form name="form" ng-submit="login(form)">
+            <md-card class="md-whiteframe-z5">
+                <md-card-content class="md-padding">
+                    <md-input-container md-no-float>
+                        <md-icon md-svg-icon="social:person"></md-icon>
+                        <input placeholder="Ihre E-Mail" required ng-model="user.email" name="email" autocapitalize="off" spellcheck="false" autocorrect="off" type="email">
+                        <div ng-messages="form.email.$error">
+                            <div ng-message="required">Ihre E-Mail ist erforderlich.</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container md-no-float>
+                        <md-icon md-svg-icon="communication:vpn_key"></md-icon>
+                        <input placeholder="Ihr Passwort" type="password" required ng-model="user.password" name="password" autocapitalize="off" spellcheck="false" autocorrect="off">
+                        <div ng-messages="form.password.$error">
+                            <div ng-message="required">Ihr Passwort ist erforderlich.</div>
+                        </div>
+                    </md-input-container>
+                </md-card-content>
+                <div class="md-actions" layout="row" layout-sm="column" layout-align="end center">
+                    <md-button ui-sref="signup">
+                        <md-icon md-svg-icon="navigation:refresh" class="rotating" ng-show="isLoggingIn"></md-icon>
+                        Registrieren
+                    </md-button>
+                    <md-button ng-click="loginOauth('google')">
+                        Mit Google anmelden
+                    </md-button>
+                    <md-button type="submit" class="md-primary" ng-disabled="isLoggingIn">
+                        <md-icon md-svg-icon="navigation:refresh" class="rotating" ng-show="isLoggingIn"></md-icon>
+                        Anmelden
+                    </md-button>
+                </div>
+            </md-card>
+        </form>
+    </div>
+</div>

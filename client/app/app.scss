@@ -1,0 +1,238 @@
+// Component styles are injected through grunt
+// injector
+@import 'animations.scss';
+@import 'colors.scss';
+@import 'members/members.scss';
+@import 'navbar/navbar.scss';
+@import 'sidebar/sidebar.scss';
+@import 'start/start.scss';
+// endinjector
+$primary-color-dark: #388E3C;
+$primary-color: #4CAF50;
+$primary-color-light: #C8E6C9;
+$primary-color-text: #FFFFFF;
+$accent-color: #FF5722;
+$primary-text-color: #212121;
+$secondary-text-color: #727272;
+$divider-color: #B6B6B6;
+.app-background {
+    background-color: $primary-color;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.s24 {
+    height: 24px;
+    width: 24px;
+}
+
+.s28 {
+    height: 28px;
+    width: 28px;
+}
+
+.s36 {
+    height: 36px;
+    width: 36px;
+}
+
+.s48 {
+    height: 48px;
+    width: 48px;
+}
+
+.s64 {
+    height: 64px;
+    width: 64px;
+}
+
+.s72 {
+    height: 72px;
+    width: 72px;
+}
+
+.s96 {
+    height: 96px;
+    width: 96px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-ellipsize {
+    text-overflow: ellipsize;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-larger {
+    font-size: 1.4em;
+}
+
+.text-smaller {
+    font-size: 0.8em;
+}
+
+.toolbarExtensionContainer *:last-child {
+    margin-right: 0;
+}
+
+.md-actions {
+    border-top: 1px solid #f4f4f4;
+    order: 2;
+}
+
+divider {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.md-grey-background {
+    background-color: #eee !important;
+    -webkit-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+}
+
+md-toolbar.md-taller {
+    max-height: 156px;
+    min-height: 156px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.avatar {
+    padding: 16px;
+    border-radius: 50%;
+}
+
+md-backdrop.md-opaque.md-default-theme {
+    background-color: rgba(0, 0, 0, 0.42);
+}
+
+.slight-opacity {
+    opacity: 0.8;
+}
+
+*:focus {
+    outline: none;
+}
+
+.md-avatar svg {
+    border-radius: 50%;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.app-progress {
+    position: fixed !important;
+    z-index: 999;
+    margin-top: -5px;
+}
+
+.two-lines {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.one-line {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.animated-list {
+    &.ng-enter {
+        -webkit-animation: fadeInLeft 0.4s;
+        -moz-animation: fadeInLeft 0.4s;
+        -ms-animation: fadeInLeft 0.4s;
+        animation: fadeInLeft 0.4s;
+    }
+    &.ng-leave {
+        -webkit-animation: fadeOutLeft 0.4s;
+        -moz-animation: fadeOutLeft 0.4s;
+        -ms-animation: fadeOutLeft 0.4s;
+        animation: fadeOutLeft 0.4s;
+    }
+}
+
+.rounded-corners {
+    border-radius: 8px;
+}
+
+.img-frame {
+    padding: 32px;
+    background-color: $primary-color-dark;
+}
+
+.clickable {
+    cursor: pointer;
+}

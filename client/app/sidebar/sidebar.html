@@ -1,0 +1,45 @@
+<md-sidenav layout="column" style="overflow: hidden;" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <div style="overflow: auto;">
+        <md-toolbar class="md-taller md-hue-2">
+            <div layout="row" class="md-toolbar-tools-bottom inset" layout-align="space-between end">
+                <div layout="column" layout-padding layout-align="space-between start">
+                    <div ng-if="isLoggedIn()">
+                        <md-icon md-svg-icon="avatars:svg-{{ getCurrentUser().name.charCodeAt(0) % 10}}" class="md-avatar s64 no-margin" style="margin-bottom: 8px;">
+                        </md-icon>
+                        <div class="md-subhead text-bold">{{ getCurrentUser().name }}</div>
+                    </div>
+                    <div ng-if="!isLoggedIn()">
+                        <md-icon md-svg-icon="bw_logo" class="md-avatar s64 no-margin" style="margin-bottom: 8px;">
+                        </md-icon>
+                        <div class="md-subhead text-bold">Bergwacht Dresden</div>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-list ng-show="isLoggedIn()">
+            <md-list-item ng-repeat="item in menu" ng-click="open(item.link)">
+                <md-icon md-svg-icon="{{ item.icon }}"></md-icon>
+                <p>
+                    {{ item.title }}
+                </p>
+            </md-list-item>
+        </md-list>
+    </div>
+    <div flex></div>
+    <md-list>
+        <md-divider></md-divider>
+        <md-list-item ng-click="open('settings')">
+            <md-icon md-svg-icon="action:settings"></md-icon>
+            <p>Einstellungen</p>
+        </md-list-item>
+        <md-list-item ng-show="isAdmin()" ng-click="open('admin')">
+            <md-icon md-svg-icon="hardware:security"></md-icon>
+            <p>Verwalten</p>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item ng-click="logout()">
+            <md-icon md-svg-icon="action:exit_to_app"></md-icon>
+            <p>Abmelden</p>
+        </md-list-item>
+    </md-list>
+</md-sidenav>
